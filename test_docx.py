@@ -65,4 +65,5 @@ for table in document.tables:
 '''
 
 # save to new file
+# Docx can't export rtf
 document.save('demo.docx')
