@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jul  6 11:15:40 2018
+
+@author: ukn1hc
+"""
+
 # -----------------------------------------------------------------------------------
 # http://openpyxl.readthedocs.io/en/stable
 # -----------------------------------------------------------------------------------
@@ -68,9 +75,18 @@ wb = load_workbook(filename = 'empty_book.xlsx')
 sheet_ranges = wb['range names']  # Load the sheet name. In usual: Sheet1. We can call ws = wb['range names']
 print(sheet_ranges['D18'].value)
 # 3
-print(sheet_ranges.cell(3,17).value) #(col , row)
+print(sheet_ranges.cell(3,17).value) #(row , col)
 # 16
 
+
+
+#------------------------------
+# read current row and column
+# cell.row and cell.column
+#----
+#or 
+#sheet_ranges['{}{}'.format(excel_title['ID'],cell.row)].value
+#------------------------------
 
 # -----------------------------------------------------------------------------------
 # Iterate through all rows in specific column openpyxl
